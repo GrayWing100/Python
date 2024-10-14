@@ -1,0 +1,25 @@
+print("Welcome to BMI Calculator!")
+
+# Get user input for height and weight
+height = float(input("Enter your height in meters (e.g., 1.75): "))
+weight = float(input("Enter your weight in kilograms (e.g., 70): "))
+
+# Calculate BMI
+bmi = round(weight / height ** 2, 1)  # Round to one decimal place
+
+# Determine weight category and provide feedback
+if bmi < 18.5:
+    print(f"Your BMI is {bmi}. You are classified as underweight.")
+    print("You should consider eating more!")
+elif 18.5 <= bmi < 25:  
+    print(f"Your BMI is {bmi}. You have a normal weight.")
+    print("You are at a perfect weight.")
+elif 25 <= bmi < 30:
+    print(f"Your BMI is {bmi}. You are slightly overweight.")
+    print("Consider adopting a healthier lifestyle.")
+elif 30 <= bmi < 35: 
+    print(f"Your BMI is {bmi}. You are classified as obese.")
+    print("It's important to take steps towards a healthier lifestyle.")
+else:
+    print(f"Your BMI is {bmi}. You are classified as clinically obese.")
+    print("It's important to consult with a healthcare provider.")
